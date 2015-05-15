@@ -1,0 +1,30 @@
+{
+  "name": "datavis",
+  "version": "0.0.0",
+  "description": "A radar points style data visualisation graph",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a 0.0.0.0 -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franksloan/datavis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/franksloan/datavis/issues"
+  },
+  "homepage": "https://github.com/franksloan/datavis",
+  "devDependencies": {
+    "connect-livereload": "^0.5.3",
+    "gulp": "^3.8.11",
+    "gulp-jshint": "^1.10.0",
+    "tiny-lr": "^0.1.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.3",
+    "gulp-jshint": "^1.10.0"
+  }
+}

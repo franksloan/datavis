@@ -1,0 +1,57 @@
+body {
+	overflow: hidden;
+	margin: 0;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica;
+	background-color: #666;
+	}
+
+#container {
+	padding: 25px;
+}
+
+#chart {
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+#sidebar {
+	float: left;
+	padding: 20px;
+	border-radius: 6px;
+	opacity: 50%;
+	background-color: #888;
+	height: 600px;
+	width: 20%;
+	left: 20px;
+	top: 20px;
+}
+
+.employee-img {
+	display: inline-block;
+	padding-top: 20px;
+	padding-left: 15px;
+}
+
+img {
+	border-radius: 6px;
+	border-width: 3px;
+	border-color: #222;
+	border-style: solid;
+}
+
+.info-popup {
+	overflow: hidden;
+	position: relative;
+	width: 200px;
+	height: 160px;
+	z-index: 999;
+	background-color: #111;
+	color: #fff;
+	opacity: 0.75;
+	border-radius: 3.5%;
+	padding: 10px;
+	transition: width 10s, height 2s;
+	transition-timing-function: ease-in-out;
+}

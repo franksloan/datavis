@@ -1,0 +1,81 @@
+
+	{
+	"monday":
+		[
+			{
+			"axis": "tempOut",
+			"name": "Tempurature Outside",
+			"value": 30,
+			"sunny": true,
+			"raining": false
+			},
+			{
+			"axis": "tempIn",
+			"name": "Tempurature Inside",
+			"value": 25,
+			"heating": true,
+			"windows": false
+			},
+			{
+			"axis": "drinksAvail",
+			"name": "Drinks Available",
+			"value": 22,
+			"coca-cola": 10,
+			"water": 9,
+			"sprite": 8,
+			"beer": 9
+			},
+			{
+			"axis": "waterPlants",
+			"name": "Time until plants need watering",
+			"value": 50,
+			"last-watered": 8
+			},
+			{
+			"axis": "totalVisitors",
+			"name": "Total Visitors Online",
+			"value": 700,
+			"average-time": 3,
+			"average-clicks": 5
+			}
+		],
+	"tuesday":
+		[
+			{
+			"officeStatId": "tempurature-outside",
+			"officeStatName": "Tempurature Outside",
+			"value": 22,
+			"sunny": true,
+			"raining": false
+			},
+			{
+			"officeStatId": "tempurature-inside",
+			"officeStatName": "Tempurature Inside",
+			"value": 25,
+			"heating": true,
+			"windows": false
+			},
+			{
+			"officeStatId": "drinks-available",
+			"officeStatName": "Drinks Available",
+			"value": 40,
+			"coca-cola": 10,
+			"water": 9,
+			"sprite": 8,
+			"beer": 9
+			},
+			{
+			"officeStatId": "water-plants",
+			"officeStatName": "Time until plants need watering",
+			"value": 22,
+			"last-watered": 8
+			},
+			{
+			"officeStatId": "total-visitors",
+			"officeStatName": "Total Visitors Online",
+			"value": 2500,
+			"average-time": 3,
+			"average-clicks": 5
+			}
+		]
+	}
