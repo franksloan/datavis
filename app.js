@@ -18,7 +18,6 @@ app.get('/', function(req, res){
 var router = express.Router();
 
 router.use(function(req, res, next){
-	console.log('In middleware');
 	next();
 });
 
@@ -32,33 +31,35 @@ router.route('/employees')
 	res.json(employees);
 });
 
-//get a specific day info
+
 router.route('/stats/:day')
+//get a specific day info - unused
 .get(function(req, res){
 	var day = req.params.day.toLowerCase();
 	if(!stats[day]){
-		console.log(req);
 		res.statusCode = 404;
 		return res.send('Error 404: That is not a valid working day');
 	}
 	var stat = stats[day];
 	res.json(stat);
 })
+//set a value for a property in that day
 .put(function(req, res){
 	var day = req.params.day.toLowerCase();
 	if(!stats[day]){
-		console.log(req);
 		res.statusCode = 404;
 		return res.send('Error 404: That is not a valid working day');
 	}
-	console.log(req.body);
-	console.log(stats[day][0]);
-	stats[day][0].value = req.body.value;
-	console.log(stats[day][0]);
+	//find the correct property to update
+	for(var i = 0; i < stats[day].length; i++){
+		if(stats[day][i].axis === req.body.axis){
+			stats[day][i].value = req.body.value;
+		}
+	}
 	res.json({message: 'Updated'});
 });
 
 //use data route as base
 app.use('/', router);
 
-app.listen(process.env.PORT || 4000);
+app.listen(process.env.PORT || 8080);

@@ -6,30 +6,31 @@
 			"axis": "tempOut",
 			"name": "Tempurature Outside",
 			"value": 30,
-			"sunny": true,
-			"raining": false
+			"weather": "Sun behind clouds",
+			"sunset": "8:13 pm"
 			},
 			{
 			"axis": "tempIn",
 			"name": "Tempurature Inside",
-			"value": 25,
-			"heating": true,
-			"windows": false
+			"value": 2,
+			"heating": "Off",
+			"windows": "Open"
 			},
 			{
 			"axis": "drinksAvail",
 			"name": "Drinks Available",
-			"value": 22,
-			"coca-cola": 10,
-			"water": 9,
+			"value": 24,
+			"coca-cola": 5,
+			"water": 6,
 			"sprite": 8,
-			"beer": 9
+			"beer": 5
 			},
 			{
 			"axis": "waterPlants",
 			"name": "Time until plants need watering",
 			"value": 50,
-			"last-watered": 8
+			"last-watered": 8,
+			"type": "daffodils"
 			},
 			{
 			"axis": "totalVisitors",
@@ -42,40 +43,161 @@
 	"tuesday":
 		[
 			{
-			"officeStatId": "tempurature-outside",
-			"officeStatName": "Tempurature Outside",
-			"value": 22,
-			"sunny": true,
-			"raining": false
+			"axis": "tempOut",
+			"name": "Tempurature Outside",
+			"value": 18,
+			"weather": "Raining",
+			"sunset": "7:13 pm"
 			},
 			{
-			"officeStatId": "tempurature-inside",
-			"officeStatName": "Tempurature Inside",
+			"axis": "tempIn",
+			"name": "Tempurature Inside",
 			"value": 25,
-			"heating": true,
-			"windows": false
+			"heating": "On",
+			"windows": "Closed"
 			},
 			{
-			"officeStatId": "drinks-available",
-			"officeStatName": "Drinks Available",
-			"value": 40,
+			"axis": "drinksAvail",
+			"name": "Drinks Available",
+			"value": 36,
 			"coca-cola": 10,
 			"water": 9,
 			"sprite": 8,
 			"beer": 9
 			},
 			{
-			"officeStatId": "water-plants",
-			"officeStatName": "Time until plants need watering",
-			"value": 22,
-			"last-watered": 8
+			"axis": "waterPlants",
+			"name": "Time until plants need watering",
+			"value": 50,
+			"last-watered": 8,
+			"type": "Cactus"
 			},
 			{
-			"officeStatId": "total-visitors",
-			"officeStatName": "Total Visitors Online",
-			"value": 2500,
-			"average-time": 3,
-			"average-clicks": 5
+			"axis": "totalVisitors",
+			"name": "Total Visitors Online",
+			"value": 500,
+			"average-time": 7,
+			"average-clicks": 22
+			}
+		],
+		"wednesday":
+		[
+			{
+			"axis": "tempOut",
+			"name": "Tempurature Outside",
+			"value": 22,
+			"weather": "Cloudy",
+			"sunset": "7:30 pm"
+			},
+			{
+			"axis": "tempIn",
+			"name": "Tempurature Inside",
+			"value": 24,
+			"heating": "Off",
+			"windows": "Closed"
+			},
+			{
+			"axis": "drinksAvail",
+			"name": "Drinks Available",
+			"value": 2,
+			"coca-cola": 3,
+			"water": 1,
+			"sprite": 2,
+			"beer": 3
+			},
+			{
+			"axis": "waterPlants",
+			"name": "Time until plants need watering",
+			"value": 50,
+			"last-watered": 8,
+			"type": "Begonia"
+			},
+			{
+			"axis": "totalVisitors",
+			"name": "Total Visitors Online",
+			"value": 100,
+			"average-time": 7,
+			"average-clicks": 22
+			}
+		],
+		"thursday":
+		[
+			{
+			"axis": "tempOut",
+			"name": "Tempurature Outside",
+			"value": 22,
+			"weather": "Windy",
+			"sunset": "8:03 pm"
+			},
+			{
+			"axis": "tempIn",
+			"name": "Tempurature Inside",
+			"value": 15,
+			"heating": "Off",
+			"windows": "Closed"
+			},
+			{
+			"axis": "drinksAvail",
+			"name": "Drinks Available",
+			"value": 36,
+			"coca-cola": 10,
+			"water": 9,
+			"sprite": 8,
+			"beer": 9
+			},
+			{
+			"axis": "waterPlants",
+			"name": "Time until plants need watering",
+			"value": 50,
+			"last-watered": 10,
+			"type": "Chinese Evergreen"
+			},
+			{
+			"axis": "totalVisitors",
+			"name": "Total Visitors Online",
+			"value": 900,
+			"average-time": 7,
+			"average-clicks": 22
+			}
+		],
+		"friday":
+		[
+			{
+			"axis": "tempOut",
+			"name": "Tempurature Outside",
+			"value": 32,
+			"weather": "Heatwave",
+			"sunset": "9:30 pm"
+			},
+			{
+			"axis": "tempIn",
+			"name": "Tempurature Inside",
+			"value": 25,
+			"heating": "Off",
+			"windows": "Open"
+			},
+			{
+			"axis": "drinksAvail",
+			"name": "Drinks Available",
+			"value": 19,
+			"coca-cola": 5,
+			"water": 3,
+			"sprite": 5,
+			"beer": 6
+			},
+			{
+			"axis": "waterPlants",
+			"name": "Time until plants need watering",
+			"value": 23,
+			"last-watered": 15,
+			"type": "Dragon tree"
+			},
+			{
+			"axis": "totalVisitors",
+			"name": "Total Visitors Online",
+			"value": 623,
+			"average-time": 2,
+			"average-clicks": 16
 			}
 		]
 	}

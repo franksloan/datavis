@@ -4,11 +4,7 @@
 	<title>Data visualisation app</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-  	<!-- <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"> -->
-  	<link rel="stylesheet" href="/client/css/style.css">
-   	<!-- <script src="components/angular/angular.min.js"></script>
-	// <script src="components/angular-route/angular-route.min.js"></script> -->
-	
+  	<link rel="stylesheet" href="/client/css/style.css">	
 </head>
 	<body>
 		<div id="container">
@@ -16,7 +12,15 @@
 				<div id="sidebar">
 				</div>
 				<div id="chart"></div>
-				<div id="day-selector">
+				<div id="days">
+					<ul id="day-selector">
+						<li><button class="btn" id="monday">Monday</button></li>
+						<li><button class="btn" id="tuesday">Tuesday</button></li>
+						<li><button class="btn" id="wednesday">Wednesday</button></li>
+						<li><button class="btn" id="thursday">Thursday</button></li>
+						<li><button class="btn" id="friday">Friday</button></li>
+						<li><button class="btn" id="all">All Days</button></li>
+					</ul>
 				</div>
 			</div>
 			

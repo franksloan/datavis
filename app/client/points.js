@@ -1,4 +1,8 @@
 var RadarChart = {
+  //id - to attach graph to
+  //d - data array
+  //options - configuration object
+  //dayIndex - change colour each day
   draw: function(id, d, options){
 	var cfg = {
 		radius: 10,
@@ -17,14 +21,6 @@ var RadarChart = {
 		ExtraWidthY: 100,
 		color: d3.scale.category10()
 	};
-	//allow convert json data into percentages
-	var maximums = {
- 		tempOut: 40,
- 		tempIn: 35,
- 		drinksAvail: 25,
- 		waterPlants: 60,
- 		totalVisitors: 1000
- 	};
 
 	if('undefined' !== typeof options){
 	  for(var i in options){
@@ -33,7 +29,7 @@ var RadarChart = {
 		}
 	  }
 	}
-	cfg.maxValue = Math.max(cfg.maxValue, d3.max(d, function(i){return d3.max(i.map(function(o){return o.value/maximums[o.axis];}))}));
+	cfg.maxValue = Math.max(cfg.maxValue, d3.max(d, function(i){return d3.max(i.map(function(o){return o.value/maximums[o.axis].value;}))}));
 	var allAxis = (d[0].map(function(i, j){return i.axis}));
 	var total = allAxis.length;
 	var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
@@ -94,7 +90,8 @@ var RadarChart = {
 			};
 		})
 		.style("font-family", "sans-serif")
-		.style("font-size", "15px")
+		.style("font-size", "18px")
+		.style("font-weight", "bold")
 		.attr("text-anchor", "middle")
 		.attr("dy", "1.5em")
 		.attr("transform", function(d, i){return "translate(0, -10)"})
@@ -107,8 +104,8 @@ var RadarChart = {
 		.data(y, function(j, i){
 		  dataValues.push([
 		  	//set data points for each eventual polygon and convert values into decimals
-			cfg.w/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis], 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
-			cfg.h/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis], 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
+			cfg.w/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis].value, 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
+			cfg.h/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis].value, 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
 		  ]);
 		});
 	  dataValues.push(dataValues[0]);
@@ -157,13 +154,14 @@ var RadarChart = {
 		.attr("alt", function(j){return Math.max(j.value/maximums[j.axis], 0)})
 		.attr("cx", function(j, i){
 		  dataValues.push([
-			cfg.w/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis], 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
-			cfg.h/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis], 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
+			//convert real values to decimals for distance of circles from origin
+			cfg.w/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis].value, 0))/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total)), 
+			cfg.h/2*(1-(parseFloat(Math.max(j.value/maximums[j.axis].value, 0))/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total))
 		]);
-		return cfg.w/2*(1-(Math.max(j.value/maximums[j.axis], 0)/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total));
+		return cfg.w/2*(1-(Math.max(j.value/maximums[j.axis].value, 0)/cfg.maxValue)*cfg.factor*Math.sin(i*cfg.radians/total));
 		})
 		.attr("cy", function(j, i){
-		  return cfg.h/2*(1-(Math.max(j.value/maximums[j.axis], 0)/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total));
+		  return cfg.h/2*(1-(Math.max(j.value/maximums[j.axis].value, 0)/cfg.maxValue)*cfg.factor*Math.cos(i*cfg.radians/total));
 		})
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.color(series)).style("fill-opacity", .9);

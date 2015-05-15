@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "A radar points style data visualisation graph",
   "main": "index.js",
-  "scripts": {
-    "start": "http-server -a 0.0.0.0 -p 3000"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/franksloan/datavis.git"
@@ -24,7 +21,6 @@
   },
   "dependencies": {
     "body-parser": "^1.12.4",
-    "express": "^4.12.3",
-    "gulp-jshint": "^1.10.0"
+    "express": "^4.12.3"
   }
 }
