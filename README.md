@@ -2,8 +2,8 @@
 
 to run project
 
-npm install
-bower install
+	npm install
+	bower install
 
 to start run
 node app.js
