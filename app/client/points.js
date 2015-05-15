@@ -15,7 +15,7 @@ var RadarChart = {
 		radians: 2 * Math.PI,
 		opacityArea: 0.3,
 		ToRight: 5,
-		TranslateX: 200,
+		TranslateX: 120,
 		TranslateY: 100,
 		ExtraWidthX: 100,
 		ExtraWidthY: 100,
