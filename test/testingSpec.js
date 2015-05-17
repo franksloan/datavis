@@ -16,3 +16,15 @@ describe('test config', function(){
 			}
 		})
 });
+
+describe('popups', function(){
+
+	
+		beforeEach(function(){
+
+		});
+
+		it('should test that nodes worked when clicked', function(){
+
+		});
+});
